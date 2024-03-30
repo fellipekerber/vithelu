@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGroupArrowsRotate, faPersonCane, faPersonCirclePlus, faPersonWalking, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-export async function getStaticPaths() {
+export async function getStaticProps() {
     // Seu código para obter os paths
     return {
         paths: [
