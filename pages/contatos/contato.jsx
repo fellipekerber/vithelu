@@ -3,26 +3,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export async function getStaticProps() {
-    // Seu código para obter os paths
     return {
-        paths: [
-            // Lista de paths
-        ],
-        fallback: false // ou 'blocking' ou true
-    };
+        props: {
+            titulo: 'Quem somos',
+            content: 'Conteúdo',
+            msgExtra: 'Demonstre o compromisso da sua empresa com a visão de excelência do seu ramo em cada interação.'
+        }
+    }
 }
 
-export default function Contatos(params) {
+export default function Contatos(props) {
     return (<>
         <div className={styles.center}>
             <h1>
-                Contatos
+                {props.titulo}
             </h1>
         </div>
         <div className={styles.grid}>
             <div className={styles.description}>
                 <p>
-                    <code className={styles.code}>Demonstre o compromisso da sua empresa com a visão de excelência do seu ramo em cada interação.</code>
+                    <code className={styles.code}>{props.msgExtra}</code>
                     <FontAwesomeIcon icon={faPhone} />
                 </p>
             </div>

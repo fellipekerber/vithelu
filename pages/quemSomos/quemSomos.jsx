@@ -3,26 +3,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGroupArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 
 export async function getStaticProps() {
-    // Seu código para obter os paths
     return {
-        paths: [
-            // Lista de paths
-        ],
-        fallback: false // ou 'blocking' ou true
-    };
+        props: {
+            titulo: 'Quem somos',
+            content: 'Conteúdo',
+            msgExtra: 'Demonstre o compromisso da sua empresa com a visão de excelência do seu ramo em cada interação.'
+        }
+    }
 }
 
-export default function QuemSomos(params) {
+export default function QuemSomos(props) {
     return (<>
         <div className={styles.center}>
             <h1>
-                Quem somos
+                {props.titulo}
             </h1>
         </div>
         <div className={styles.grid}>
             <div className={styles.description}>
                 <p>
-                    <code className={styles.description}>Demonstre o compromisso da sua empresa com a visão de excelência do seu ramo em cada interação.</code>
+                    <code className={styles.description}>{props.msgExtra}</code>
                     <FontAwesomeIcon icon={faGroupArrowsRotate} />
                 </p>
             </div>
