@@ -1,6 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment, faComments, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 export async function getStaticProps() {
     // Seu código para obter os paths
@@ -18,12 +18,13 @@ export default function Parceiros(params) {
         <div className={styles.center}>
             <h1>
                 Parceiros
+
             </h1>
         </div>
         <div className={styles.grid}>
             <div className={styles.description}>
                 <p>
-                    <code className={styles.code}>Demonstre o compromisso da sua empresa com a visão de excelência do seu ramo em cada interação.</code>
+                    <code className={styles.code}>Texto aqui.</code>
                     <FontAwesomeIcon icon={faComments} />
                 </p>
             </div>
